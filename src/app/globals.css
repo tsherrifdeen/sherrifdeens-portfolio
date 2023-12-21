@@ -20,6 +20,9 @@ body {
   font-size: 13px;
 }
 
+nav {
+  font-family: var(--font-sans);
+}
 main {
   max-width: 1280px;
   min-height: 100vh;

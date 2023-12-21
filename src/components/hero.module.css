@@ -1,7 +1,7 @@
 .paragraph {
   color: var(--Main-Gray, #606060);
   /* Heading-2 */
-  font-family: DM Sans;
+  font-family: var(--font-sans);
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;

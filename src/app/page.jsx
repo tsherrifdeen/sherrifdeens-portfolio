@@ -4,7 +4,7 @@ import { dm_sans } from "./fonts";
 const Home = () => {
   return (
     <main>
-      <Nav className={dm_sans.className} />
+      <Nav />
       <Hero />
     </main>
   );
