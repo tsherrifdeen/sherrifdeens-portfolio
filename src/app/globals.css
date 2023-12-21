@@ -4,17 +4,29 @@
 
 :root {
   --background-rgb: 243, 243, 243;
-  --font-color: 34, 34, 34;
+  --font-color: 24, 23, 23;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background-rgb: 255, 255, 255;
-    --font-color: ;
+    --font-color: 24, 23, 23;
   }
 }
 
 body {
   color: rgb(var(--font-color));
   background: rgb(var(--background-rgb));
+  font-size: 13px;
+}
+
+main {
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: auto;
+}
+
+a:active {
+  font-weight: 600;
+  color: #181717;
 }

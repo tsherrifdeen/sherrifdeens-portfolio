@@ -1,7 +1,35 @@
 import React from "react";
+import { dm_sans } from "@/app/fonts";
+import Link from "next/link";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarCollapse,
+  NavbarLink,
+  NavbarToggle,
+} from "flowbite-react";
 
-const nav = () => {
-  return <div></div>;
+const Nav = () => {
+  return (
+    <Navbar fluid rounded>
+      <NavbarBrand as={Link} href="https://flowbite-react.com">
+        <span className="self-center text-3xl font-extrabold whitespace-nowrap dark:text-white">
+          st.
+        </span>
+      </NavbarBrand>
+      <NavbarToggle />
+      <NavbarCollapse>
+        <NavbarLink href="#" active>
+          Home
+        </NavbarLink>
+        <NavbarLink as={Link} href="#">
+          Projects
+        </NavbarLink>
+        <NavbarLink href="#">Resume</NavbarLink>
+        <NavbarLink href="#">Contact</NavbarLink>
+      </NavbarCollapse>
+    </Navbar>
+  );
 };
 
-export default nav;
+export default Nav;
