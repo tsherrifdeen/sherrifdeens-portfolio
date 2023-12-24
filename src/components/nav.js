@@ -1,5 +1,4 @@
 import React from "react";
-import { dm_sans } from "@/app/fonts";
 import Link from "next/link";
 import {
   Navbar,
@@ -11,7 +10,7 @@ import {
 
 const Nav = () => {
   return (
-    <Navbar fluid rounded>
+    <Navbar fluid rounded className="px-0 py-24">
       <NavbarBrand as={Link} href="https://flowbite-react.com">
         <span className="self-center text-3xl font-extrabold whitespace-nowrap dark:text-white">
           st.
