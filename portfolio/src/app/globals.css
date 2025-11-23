@@ -6,10 +6,13 @@
 }
 
 @theme inline {
-  --font-IBM-Plex-Mono: var(--font-ibm-plex-mono), monospace;
-  --font-Manrope: var(--font-manrope), sans-serif;
+  /* Fonts (corrected variable names) */
+  --font-ibm-plex-mono: var(--font-ibm-plex-mono), monospace;
+  --font-manrope: var(--font-manrope), sans-serif;
   --font-ubuntu: var(--font-ubuntu), sans-serif;
   --font-space-grotesk: var(--font-space-grotesk), sans-serif;
+
+  /* colors*/
   --color-primary: #98faec;
   --breakpoint-Q: 1440px;
   --color-secondary: #12f7d6;
@@ -33,5 +36,5 @@
 body {
   background: var(--color-background);
   color: white;
-  @apply font-Manrope;
+  @apply font-manrope;
 }

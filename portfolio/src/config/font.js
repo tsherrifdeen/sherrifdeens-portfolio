@@ -8,27 +8,24 @@ import {
 export const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-IBM-Plex-Mono",
-  weight: ["100", "200", "300", "400", "500", "600", "700"], // Specify desired weights
+  variable: "--font-ibm-plex-mono",
+  weight: ["400", "600", "700"],
 });
 
 export const manrope = Manrope({
   subsets: ["latin"],
-  display: "swap",
-  variable: "--font-Manrope",
-  weight: ["200", "300", "400", "500", "600", "700", "800"], // Specify desired weights
+  variable: "--font-manrope",
+  weight: ["400", "600", "700"],
 });
 
 export const ubuntu = Ubuntu({
   subsets: ["latin"],
-  display: "swap",
   variable: "--font-ubuntu",
-  weight: ["300", "400", "500", "700"], // Specify desired weights
+  weight: ["400", "700"],
 });
 
 export const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  display: "swap",
   variable: "--font-space-grotesk",
-  weight: ["300", "400", "500", "600", "700"], // Specify desired weights
+  weight: ["400", "600", "700"],
 });
