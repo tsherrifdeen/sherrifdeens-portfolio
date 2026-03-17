@@ -31,7 +31,7 @@ const ProfileCard = () => (
   >
     <Image
       src="/images/profile-photo.png"
-      alt="Sheriff profile photo"
+      alt="Sherrifdeen profile photo"
       width={102}
       height={102}
       className="rounded-full object-cover"
@@ -53,13 +53,16 @@ const ProfileCard = () => (
         </div>
       ))}
     </div>
-    <button
+    <a
+      href={process.env.NEXT_PUBLIC_BASE_URL + "/Sherrifdeen_Tijani_Resume.pdf"}
+      target="_blank"
+      rel="noopener noreferrer"
       className="flex items-center gap-2 px-6 py-2.5 rounded-full font-ubuntu text-base capitalize hover:opacity-90 transition-opacity mt-2"
       style={{ backgroundColor: "white", color: "#374151" }}
     >
-      Download Resume
+      View my Resume
       <Icon icon="ph:download-simple-bold" width={18} height={18} />
-    </button>
+    </a>
   </div>
 );
 
@@ -101,24 +104,24 @@ const Contact = () => {
     message: "",
   });
 
- const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-  try {
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-    if (!res.ok) throw new Error("Failed to send");
+      if (!res.ok) throw new Error("Failed to send");
 
-    alert("Message sent! Thank you for reaching out.");
-    setForm({ name: "", email: "", message: "" });
-  } catch (err) {
-    alert("Something went wrong. Please try again.");
-  }
-};
+      alert("Message sent! Thank you for reaching out.");
+      setForm({ name: "", email: "", message: "" });
+    } catch (err) {
+      alert("Something went wrong. Please try again.");
+    }
+  };
   return (
     <section
       id="contact"

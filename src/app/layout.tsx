@@ -8,8 +8,6 @@ import {
   outfit,
   playfairDisplay,
 } from "@/config/font.js";
-import Footer from "@/components/common/Footer";
-
 export const metadata = {
   title: "Sherrifdeen.dev",
   description: "Welcome to my portfolio",

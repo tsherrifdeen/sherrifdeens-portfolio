@@ -24,16 +24,12 @@ const Blogs = () => {
   const sectionRef = useScrollAnimation<HTMLElement>();
 
   return (
-    <section
-      id="blogs"
-      ref={sectionRef}
-      className="relative bg-background-3"
-    >
+    <section id="blogs" ref={sectionRef} className="relative bg-background-3">
       <div className="flex justify-center pt-16 pb-4">
         <ScrollIndicator />
       </div>
 
-      <div className="max-w-[1280px] mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 py-16">
         <SectionTitle
           title="Blogs"
           subtitle="My thoughts on technology and business, welcome to subscribe"
@@ -66,7 +62,10 @@ const Blogs = () => {
               <div className="flex flex-col gap-3 flex-1">
                 <h3
                   className="font-ubuntu font-normal text-secondary"
-                  style={{ fontSize: "clamp(20px, 2.3vw, 32px)", lineHeight: "1.125" }}
+                  style={{
+                    fontSize: "clamp(20px, 2.3vw, 32px)",
+                    lineHeight: "1.125",
+                  }}
                 >
                   {post.title}
                 </h3>
@@ -82,7 +81,9 @@ const Blogs = () => {
                     </span>
                     <div className="h-px bg-white/40 w-full" />
                   </div>
-                  <span className="text-white font-ubuntu text-base ml-1">&gt;&gt;</span>
+                  <span className="text-white font-ubuntu text-base ml-1">
+                    &gt;&gt;
+                  </span>
                 </div>
 
                 {/* Meta */}
@@ -91,12 +92,24 @@ const Blogs = () => {
                     {post.tag}
                   </span>
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-                    <span className="font-ubuntu font-medium text-white text-sm capitalize">Text</span>
-                    <span className="font-ubuntu font-light text-white text-sm capitalize">{post.author}</span>
-                    <span className="font-ubuntu font-medium text-white text-sm capitalize">Date</span>
-                    <span className="font-ubuntu font-light text-white text-sm capitalize">{post.date}</span>
-                    <span className="font-ubuntu font-medium text-white text-sm capitalize">Read</span>
-                    <span className="font-ubuntu font-light text-white text-sm capitalize">{post.readTime}</span>
+                    <span className="font-ubuntu font-medium text-white text-sm capitalize">
+                      Text
+                    </span>
+                    <span className="font-ubuntu font-light text-white text-sm capitalize">
+                      {post.author}
+                    </span>
+                    <span className="font-ubuntu font-medium text-white text-sm capitalize">
+                      Date
+                    </span>
+                    <span className="font-ubuntu font-light text-white text-sm capitalize">
+                      {post.date}
+                    </span>
+                    <span className="font-ubuntu font-medium text-white text-sm capitalize">
+                      Read
+                    </span>
+                    <span className="font-ubuntu font-light text-white text-sm capitalize">
+                      {post.readTime}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -115,9 +128,7 @@ const Blogs = () => {
           >
             View More
           </button>
-          <button
-            className="font-ubuntu text-xl capitalize px-8 py-3 rounded-full text-white border border-white/40 hover:border-secondary hover:text-secondary transition-all duration-300"
-          >
+          <button className="font-ubuntu text-xl capitalize px-8 py-3 rounded-full text-white border border-white/40 hover:border-secondary hover:text-secondary transition-all duration-300">
             Subscribe
           </button>
         </div>

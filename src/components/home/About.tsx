@@ -20,10 +20,7 @@ const About = () => {
 
       <div className="max-w-7xl mx-auto px-6 py-16">
         {/* Heading */}
-        <h2
-          className="font-ubuntu font-normal text-secondary text-center capitalize mb-16"
-          style={{ fontSize: "clamp(32px, 4vw, 64px)", lineHeight: "1.125" }}
-        >
+        <h2 className="font-ubuntu font-normal rounded-br-4xl w-fit px-6 py-1 mx-auto border-4 rounded-tl-4xl bg-background-2 md:text-6xl text-4xl text-secondary text-center capitalize mb-16">
           About me
         </h2>
 
@@ -88,8 +85,8 @@ const About = () => {
           {/* Image - desktop/tablet only */}
           <div className="hidden md:block w-full lg:w-105 shrink-0">
             <Image
-              src="/images/about-laptop.jpg"
-              alt="Sheriff coding on a laptop"
+              src="/images/about_sherrifdeen.jpg"
+              alt="Sherrifdeen coding on a laptop"
               width={420}
               height={560}
               className="rounded-2xl w-full object-cover"

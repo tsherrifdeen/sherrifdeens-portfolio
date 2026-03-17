@@ -64,7 +64,7 @@ const Hero = () => {
                 Hi,
               </h1>
               <h1
-                className="font-ubuntu font-normal"
+                className="font-manrope font-normal"
                 style={{
                   fontSize: "clamp(32px, 5vw, 64px)",
                   lineHeight: "1.125",
