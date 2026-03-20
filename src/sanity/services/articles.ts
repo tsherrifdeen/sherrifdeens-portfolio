@@ -1,9 +1,11 @@
-
+import { PostsByCategoryQueryResult, PostsQueryResult, SinglePostQueryResult } from "../sanity.types";
+import { postsByCategoryQuery, postsQuery, singlePostQuery } from "../queries/article";
+import {client as sanityClient} from "../lib/client"
 
 // Fetch all posts
-export async function getAllPosts(): Promise<SanityPost[]> {
+export async function getAllPosts(): Promise<PostsQueryResult[]> {
   try {
-    return await sanityClient.fetch<SanityPost[]>(postsQuery);
+    return await sanityClient.fetch<PostsQueryResult[]>(postsQuery);
   } catch (error) {
     console.error("Failed to fetch posts:", error);
     return [];
@@ -11,9 +13,9 @@ export async function getAllPosts(): Promise<SanityPost[]> {
 }
 
 // Fetch a single post by slug
-export async function getPostBySlug(slug: string): Promise<SanityPost | null> {
+export async function getPostBySlug(slug: string): Promise<SinglePostQueryResult | null> {
   try {
-    return await sanityClient.fetch<SanityPost>(singlePostQuery, { slug });
+    return await sanityClient.fetch<SinglePostQueryResult>(singlePostQuery, { slug });
   } catch (error) {
     console.error(`Failed to fetch post with slug "${slug}":`, error);
     return null;
@@ -23,9 +25,9 @@ export async function getPostBySlug(slug: string): Promise<SanityPost | null> {
 // Fetch posts filtered by category slug
 export async function getPostsByCategory(
   categorySlug: string
-): Promise<SanityPost[]> {
+): Promise<PostsByCategoryQueryResult[]> {
   try {
-    return await sanityClient.fetch<SanityPost[]>(postsByCategoryQuery, {
+    return await sanityClient.fetch<PostsByCategoryQueryResult[]>(postsByCategoryQuery, {
       categorySlug,
     });
   } catch (error) {
@@ -34,12 +36,3 @@ export async function getPostsByCategory(
   }
 }
 
-// Fetch all categories
-export async function getAllCategories(): Promise<SanityCategory[]> {
-  try {
-    return await sanityClient.fetch<SanityCategory[]>(categoriesQuery);
-  } catch (error) {
-    console.error("Failed to fetch categories:", error);
-    return [];
-  }
-}
