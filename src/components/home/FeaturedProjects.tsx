@@ -1,6 +1,4 @@
 "use client";
-
-import React from "react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -27,52 +25,50 @@ interface Project {
   links: ProjectLink[];
   image?: string;
 }
-
 const projects: Project[] = [
   {
     id: 1,
-    tag: "Conceptual Work",
-    title: "Promotional landing page for our favorite show",
+    tag: "Production",
+    title: "Afroangle Blog",
     description:
-      "Teamed up with a designer to breathe life into a promotional webpage for our beloved show, Adventure Time. Delivered a fully responsive design with dynamic content capabilities, seamlessly integrating a newsletter feature to keep fans updated with the latest adventures.",
+      "Developed a production-ready, SEO-optimized blog using Next.js App Router and TypeScript. Integrated Sanity CMS for headless content management, implemented i18n with DeepL API, and added AI-powered text-to-speech using ElevenLabs.",
     info: [
-      { label: "Year", value: "2023" },
-      { label: "Role", value: "Front-end Developer" },
+      { label: "Year", value: "2026" },
+      { label: "Role", value: "Software Engineer" },
     ],
     links: [
-      { label: "Live Demo", href: "#", type: "demo" },
-      { label: "See on Github", href: "#", type: "github" },
+      { label: "View Project", href: "https://afroangle.com", type: "view" },
     ],
-    image: "/images/project-adventure-time.png",
+    image: "/images/afroangle_Screenshot.png",
   },
   {
     id: 2,
-    title: "Blog site for World News",
+    tag: "Full Stack",
+    title: "Bhustore E-commerce (now Unistore)",
     description:
-      "Mastered CSS Grid complexities in building an innovative news homepage, navigating intricate design decisions for a seamless user experience. Leveraged the challenge to enhance skills in front-end development.",
+      "Designed and managed a full-stack e-commerce platform using React.js, Node.js, and PostgreSQL. Developed robust database schemas and efficient REST APIs to support seamless frontend-backend communication. Now rebranded as Unistore.",
     info: [
-      { label: "Client", value: "World News" },
-      { label: "Year", value: "2022" },
-      { label: "Role", value: "Front-end Developer" },
+      { label: "Year", value: "2024" },
+      { label: "Role", value: "Full Stack Engineer" },
     ],
-    links: [{ label: "View Project", href: "#", type: "view" }],
-    image: "/images/project-world-news.png",
+    links: [
+      { label: "View Project", href: "https://unistore.ng", type: "view" },
+    ],
+    image: "/images/unistore.png",
   },
   {
     id: 3,
-    tag: "Challenge",
-    title: "E-commerce product page",
+    tag: "MVP",
+    title: "BidNG Mobile Web App",
     description:
-      "Successfully crafted an engaging product page featuring a dynamic lightbox gallery and seamless cart functionality, showcasing proficiency in JavaScript development.",
+      "Built an MVP progressive mobile web application within 8 weeks. Converted Figma designs into code and implemented real-time features including Push notifications and live updates using Websockets.",
     info: [
-      { label: "Year", value: "2022" },
-      { label: "Role", value: "Front-end Developer" },
+      { label: "Client", value: "BidNG" },
+      { label: "Year", value: "2025" },
+      { label: "Role", value: "Front End Engineer" },
     ],
-    links: [
-      { label: "Live Demo", href: "#", type: "demo" },
-      { label: "See on Github", href: "#", type: "github" },
-    ],
-    image: "/images/project-ecommerce.png",
+    links: [{ label: "View Project", href: "https://bidng.ng", type: "view" }],
+    image: "/images/bidng_screenshot.png",
   },
 ];
 
@@ -148,6 +144,7 @@ const ProjectCard = ({ project }: { project: Project }) => (
           <div key={link.label} className="flex flex-col gap-1">
             <a
               href={link.href}
+              target="_blank"
               className="flex items-center gap-1.5 text-secondary font-manrope font-bold text-sm uppercase hover:opacity-75 transition-opacity"
             >
               {link.label}

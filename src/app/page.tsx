@@ -6,8 +6,11 @@ import Blogs from "@/components/home/Blogs";
 import Contact from "@/components/home/Contact";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
+import { getPostsByCategory } from "@/sanity/services/articles";
 
-export default function Home() {
+export default async function Home() {
+  const blogPosts = await getPostsByCategory("code");
+  console.log(blogPosts);
   return (
     <main>
       <Header />
@@ -15,7 +18,7 @@ export default function Home() {
       <About />
       <Skills />
       <FeaturedProjects />
-      <Blogs />
+      <Blogs blogPosts={blogPosts} />
       <Contact />
       <Footer />
     </main>

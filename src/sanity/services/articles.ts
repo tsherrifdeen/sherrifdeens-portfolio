@@ -32,7 +32,7 @@ export async function getPostsByCategory(
     });
   } catch (error) {
     console.error(`Failed to fetch posts for category "${categorySlug}":`, error);
-    return [];
+    return null;
   }
 }
 

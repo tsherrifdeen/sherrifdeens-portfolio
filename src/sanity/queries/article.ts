@@ -65,7 +65,7 @@ export const postsByCategoryQuery = groq`
       title,
       slug
     },
-    body
+    "excerpt": pt::text(body)[0...150] + "..."
   }
 `;
 
