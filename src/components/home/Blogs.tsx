@@ -8,7 +8,7 @@ import Link from "next/link";
 import { PostsByCategoryQueryResult } from "@/sanity/sanity.types";
 
 interface BlogProps {
-  blogPosts: PostsByCategoryQueryResult[];
+  blogPosts: PostsByCategoryQueryResult;
 }
 
 const Blogs = ({ blogPosts }: BlogProps) => {
