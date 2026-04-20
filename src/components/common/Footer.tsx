@@ -27,7 +27,7 @@ const Footer = () => {
             </Link> */}
           </div>
           {/* Social icons */}
-          <Icons hidden={false} primary={false} />
+          <Icons primary={false} />
         </div>
       </div>
     </footer>

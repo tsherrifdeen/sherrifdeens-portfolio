@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 
-const Icons = ({ hidden, primary }) => {
+const Icons = ({ primary }) => {
   // Logic to determine color schemes based on the 'primary' prop
   const bgClass = primary ? "bg-background-3" : "bg-primary";
   const iconColorClass = primary ? "text-secondary" : "text-background-dark";
@@ -15,7 +15,7 @@ const Icons = ({ hidden, primary }) => {
   const buttonBase = `w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${bgClass} ${iconColorClass} ${hoverBgClass} ${hoverIconClass}`;
 
   return (
-    <div className={`${hidden ? "hidden md:flex" : "flex"} items-center gap-3`}>
+    <div className={`flex items-center gap-3`}>
       {/* GitHub */}
       <a
         href="https://github.com/tsherrifdeen"
