@@ -101,7 +101,7 @@ export default function CustomCursor() {
 
   const ringVariants = {
     default: { scale: 1, opacity: 0.75 },
-    hover: { scale: 2, opacity: 0.6 },
+    hover: { scale: 1.75, opacity: 0.6 },
     click: { scale: 0.75, opacity: 1 },
   };
 
@@ -142,8 +142,8 @@ export default function CustomCursor() {
           y: trailSpringY,
           translateX: "-50%",
           translateY: "-50%",
-          width: 24,
-          height: 24,
+          width: 20,
+          height: 20,
           borderRadius: "50%",
           border: "2px solid #12f7d6",
           pointerEvents: "none",

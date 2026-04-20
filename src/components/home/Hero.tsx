@@ -112,16 +112,16 @@ const Hero = () => {
             <div className="flex items-center gap-4">
               <button
                 onClick={scrollToContact}
-                className="font-manrope font-medium text-secondary capitalize hover:opacity-80 transition-opacity"
+                className="font-manrope font-medium text-secondary hover:opacity-80 transition-opacity"
                 style={{
                   fontSize: "clamp(24px, 3vw, 32px)",
                   lineHeight: "42px",
                 }}
               >
-                Let&apos;s Talk
+                Let&apos;s talk
               </button>
-              <span className="w-6 h-5 flex items-center justify-center bg-secondary rounded text-background-2">
-                <Icon icon="ph:envelope-simple" width={14} height={14} />
+              <span className="w-8 h-8 flex items-center justify-center bg-secondary rounded text-background">
+                <Icon icon="bx:chat" width="24" height="24" />
               </span>
             </div>
           </div>
