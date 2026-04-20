@@ -60,7 +60,7 @@ const TechIcon = ({
   labelColor: string;
   bg: string;
 }) => (
-  <div className="flex flex-col items-center gap-4">
+  <div className="flex flex-col items-center w-32 gap-4">
     <div
       className="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 cursor-default"
       style={{ backgroundColor: bg }}
@@ -94,15 +94,15 @@ const Skills = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="flex justify-center pt-16 pb-4">
+      <div className="flex justify-center pt-10 md:pt-16 pb-4">
         <ScrollIndicator />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 py-10 md:py-16">
         <SectionTitle
           title="Skills"
           subtitle="I am striving to never stop learning and improving"
-          className="mb-16"
+          className="md:mb-16 mb-10"
         />
 
         {/* Service cards */}
@@ -126,7 +126,7 @@ const Skills = () => {
         </div>
 
         {/* Tech icons */}
-        <div className="flex flex-wrap justify-center gap-10 md:gap-16">
+        <div className="flex flex-wrap justify-center gap-8 md:gap-12">
           <TechIcon
             icon="logos:javascript"
             label="JS"

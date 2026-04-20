@@ -6,9 +6,10 @@ import ScrollIndicator from "@/components/common/ScrollIndicator";
 import SectionTitle from "@/components/common/SectionTitle";
 import Link from "next/link";
 import { PostsByCategoryQueryResult } from "@/sanity/sanity.types";
+import { formatDate } from "../../utils/dateConversion";
 
 interface BlogProps {
-  blogPosts: PostsByCategoryQueryResult;
+  blogPosts: PostsByCategoryQueryResult[];
 }
 
 const Blogs = ({ blogPosts }: BlogProps) => {
@@ -96,7 +97,7 @@ const Blogs = ({ blogPosts }: BlogProps) => {
                           Date:
                         </span>
                         <span className="font-ubuntu font-light text-white text-sm capitalize">
-                          {post.publishedAt}
+                          {formatDate(post.publishedAt)}
                         </span>
                       </div>
 

@@ -167,18 +167,18 @@ const FeaturedProjects = () => {
       ref={sectionRef}
       className="relative bg-background-dark topo-bg"
     >
-      <div className="flex justify-center pt-16 pb-4">
+      <div className="flex justify-center pt-10 md:pt-16 pb-4">
         <ScrollIndicator />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 py-10 md:py-16">
         <SectionTitle
           title="Featured Projects"
           subtitle="Here are some of the selected projects that showcase my passion for software development."
-          className="mb-20"
+          className="mb-10 md:mb-16"
         />
 
-        <div className="flex flex-col gap-24">
+        <div className="flex flex-col md:gap-24 gap-16">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

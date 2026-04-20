@@ -89,7 +89,7 @@ const InputField = ({
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="bg-transparent text-white font-ubuntu text-base outline-none placeholder:text-white/30 w-full"
+        className="bg-transparent text-white font-ubuntu text-base outline-none placeholder:text-white/65 w-full"
       />
       <div className="h-px" style={{ backgroundColor: "#98faec" }} />
     </div>
@@ -126,10 +126,10 @@ const Contact = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className="relative bg-background-dark topo-bg"
-      style={{ borderTop: "1px solid #12f7d6" }}
+      className="relative bg-background-dark contact-bg"
+      // style={{ borderTop: "1px solid #12f7d6" }}
     >
-      <div className="flex justify-center pt-16 pb-4">
+      <div className="flex justify-center pt-10 md:pt-16 pb-4">
         <ScrollIndicator />
       </div>
 
@@ -173,17 +173,17 @@ const Contact = () => {
 
               <div className="flex flex-col gap-2">
                 <label className="font-ubuntu font-light text-secondary text-sm">
-                  Your message *
+                  Your Message *
                 </label>
                 <div className="flex flex-col gap-1">
                   <textarea
-                    placeholder="Enter your needs"
+                    placeholder="How can I help you?"
                     rows={3}
                     value={form.message}
                     onChange={(e) =>
                       setForm((f) => ({ ...f, message: e.target.value }))
                     }
-                    className="bg-transparent text-white font-ubuntu text-base outline-none placeholder:text-white/30 resize-none w-full"
+                    className="bg-transparent text-white font-ubuntu text-base outline-none placeholder:text-white/65 resize-none w-full"
                   />
                   <div
                     className="h-px"

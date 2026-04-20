@@ -17,12 +17,22 @@ const Icons = ({ hidden, primary }) => {
   return (
     <div className={`${hidden ? "hidden md:flex" : "flex"} items-center gap-3`}>
       {/* GitHub */}
-      <a href="#" className={buttonBase} aria-label="GitHub">
+      <a
+        href="https://github.com/tsherrifdeen"
+        className={buttonBase}
+        aria-label="GitHub"
+        target="_blank"
+      >
         <Icon icon="mdi:github" width={18} height={18} />
       </a>
 
       {/* LinkedIn */}
-      <a href="#" className={buttonBase} aria-label="LinkedIn">
+      <a
+        href="https://linkedin.com/in/sherrifdeen-tijani"
+        className={buttonBase}
+        aria-label="LinkedIn"
+        target="_blank"
+      >
         <Icon icon="ri:linkedin-fill" width={18} height={18} />
       </a>
 

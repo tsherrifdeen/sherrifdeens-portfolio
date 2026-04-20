@@ -14,13 +14,13 @@ const About = () => {
       className="bg-background-dark topo-bg relative"
     >
       {/* Scroll Indicator */}
-      <div className="flex justify-center pt-16 pb-4">
+      <div className="flex justify-center pt-10 md:pt-16 pb-4">
         <ScrollIndicator />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 py-10 md:py-16">
         {/* Heading */}
-        <h2 className="font-ubuntu font-normal rounded-br-4xl w-fit px-6 py-1 mx-auto border-4 rounded-tl-4xl bg-background-2 md:text-6xl text-4xl text-secondary text-center capitalize mb-16">
+        <h2 className="font-ubuntu font-normal rounded-br-4xl w-fit px-6 py-1 mx-auto border-4 rounded-tl-4xl bg-background-2 md:text-6xl text-4xl text-secondary text-center capitalize mb-10 md:mb-16">
           About me
         </h2>
 
@@ -28,7 +28,7 @@ const About = () => {
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
           {/* Code-styled text box */}
           <div
-            className="bg-background-3 flex-1 p-8 md:p-10"
+            className="bg-background-3 flex-1 p-6 md:p-10"
             style={{
               borderRadius: "40px 0 40px 0",
               border: "4px solid #12f7d6",

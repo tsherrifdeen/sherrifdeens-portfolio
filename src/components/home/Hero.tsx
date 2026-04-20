@@ -1,6 +1,8 @@
 "use client";
 
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Icon } from "@iconify/react";
+import CountUp from "react-countup";
 
 const StatsBox = () => (
   <div
@@ -13,12 +15,14 @@ const StatsBox = () => (
       { num: "5+", label1: "Years of", label2: "Experience" },
     ].map(({ num, label1, label2 }) => (
       <div key={label1} className="flex items-center gap-4">
-        <span
+        <CountUp
           className="text-secondary font-medium"
           style={{ fontSize: "48px", lineHeight: "62px" }}
-        >
-          {num}
-        </span>
+          start={0}
+          duration={3}
+          end={parseInt(num)}
+        />
+
         <p className="text-white text-base leading-5">
           {label1}
           <br />
@@ -33,13 +37,14 @@ const Hero = () => {
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
-
+  const sectionRef = useScrollAnimation<HTMLElement>();
   return (
     <section
       id="hero"
       className="bg-background min-h-screen pt-20 relative overflow-hidden"
+      ref={sectionRef}
     >
-      <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-6 py-8 md:py-16">
         {/* Desktop: giant "Developer" heading */}
         <div className="hidden lg:block text-center font-manrope text-primary font-normal text-8xl leading-32">
           Software Engineer

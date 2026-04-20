@@ -1,4 +1,4 @@
-import Link from "next/link";
+// import Link from "next/link";
 import Icons from "./Icons";
 
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
 
           {/* Policy links */}
           <div className="flex items-center gap-6">
-            <Link
+            {/* <Link
               href="#"
               className="font-ubuntu font-light text-white text-base hover:text-secondary transition-colors"
             >
@@ -24,7 +24,7 @@ const Footer = () => {
               className="font-ubuntu font-light text-white text-base hover:text-secondary transition-colors"
             >
               Terms &amp; Conditions
-            </Link>
+            </Link> */}
           </div>
           {/* Social icons */}
           <Icons hidden={false} primary={false} />
